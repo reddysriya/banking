@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <title>Dashboard</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Star finance</h1>
+            </div>
+
+            <nav>
+                <li>Hello {{request.user.username}}</li>
+                <a href="apply">Registration form</a>
+                 <a href="apply">KYc</a>
+            </nav>
+        </header>
+
+    </body>
+</html>

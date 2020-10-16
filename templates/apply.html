@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>APPLY</title>
+        <link rel="stylesheet" href="{% static 'css/applystyle.css' %}">
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Star finance</h1>
+            </div>
+            <nav>
+                <a href="">Home</a>
+                <a href="#how" class="active">Loan Details</a>
+                {% if user.is_authenticated %}
+                <a href="accounts/logout">Logout</a>
+                {% else %}
+                <a href="accounts/login">User Login</a>
+                <a href="accounts/register">Register</a>
+                {% endif %}
+
+
+            </nav>
+        </header>
+        <main>
+            <div class="hero-area">
+                <div>
+                    <div class="single-slide bg-img">
+                        <div class="slide-bg-img bg-img bg-overlay" style="background-image: url({% static 'images/gold.jpg' %});"></div>
+                        <div class="container h-100">
+                            <div class="row h-100 align-items-center justify-content-center">
+                                <div class="col-12 col-lg-9">
+                                    <div class="welcome-text text-center">
+                                        <h2>GOLD/SILVER LOAN</h2>
+                                        <p>Customer’s can deposit their Gold / Silver / Platinum ornaments and
+                                            avail equivalent Cash on a competitive market rates.</p>
+                                        <a href="#how">How to Apply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide-du-indicator"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="how" id="how">
+                <div class="class">
+                    <h1>HOW TO APPLY</h1>
+                    <h2><span>1.</span>LOGIN <br>
+                    <p>Login to your account</p></h2>
+                </div>
+
+                <div class="class">
+                <h2><span>2.</span>KYC VERIFICATION<p>
+                    Each customer has to submit their KYC Document to the bank, and get verified. Upon
+                    successful verification, bank issues a unique KYC Security Number, called as KN.
+                </p></h2>
+                </div>
+
+                <div class="class">
+                    <h2><span>3.</span>GOLD DEPOSIT VERIFICATION
+                        <p>
+                            KYC Completed Customer, should raise an Application request for Gold Loan, by entering
+                            the details.After submission, the customer is given with the Request id(RID), for the proof for
+                            submission. All Details are verified and would get rejected for review in
+                            case if some thing founds to be incorrect.
+                        </p>
+                    </h2>
+                </div>
+
+
+                <div class="class">
+                <h2><span>4.</span>DEPOSIT GOLD IN BANK
+                    <p>
+                        The customer has to submit the gold to the nearest Star
+                        Finance office against the RID. Then Gold Verification is done by the bank
+                        and stores the Gold Quality Index against the RID.
+                        Bank sends a notification to the Customer with the application
+                        status (accepted/rejected) etc, with amount it can disburse of the
+                        bullion deposited
+                    </p>
+                </h2>
+                </div>
+
+                <div class="class">
+                    <h2><span>5.</span>GET THE LOAN
+                        <p>
+                        The customer can view, and opt either accept or reject the
+                        bank offer. In case of accept, the money is credited to the Customer
+                        Bank Account. In Case of reject, the customer can go back to the bank,
+                        and collect the Gold Ornaments after paying the required service fee
+                        (around 500 Rs)
+                        </p>
+                    </h2>
+                </div>
+            </div>
+            <div class="slide-du-indicator"></div>
+        </main>
+        <footer id="contact">
+            <h1>Star finance</h1>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
+        </footer>
+
+    </body>
+</html>

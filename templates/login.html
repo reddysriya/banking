@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/login.css' %}">
+        <title>LOGIN</title>
+    </head>
+    <body>
+        <header>
+            <div>
+                <h1>Star finance</h1>
+            </div>
+            <nav>
+                <a href="/apply">Home</a>
+            </nav>
+        </header>
+        <div class="login-page">
+            <div class="form">
+
+              <form action="login" method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="username"><br>
+                <input type="password" name="password" placeholder="password"><br>
+                <input type="submit" name="login">
+
+
+              </form>
+              <div>
+                {% for message in messages %}
+                <h3>{{messages}}</h3>
+                {% endfor %}
+              </div>
+
+            </div>
+          </div>
+    </body>
+</html>
